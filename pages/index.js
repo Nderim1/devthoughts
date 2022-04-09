@@ -3,23 +3,44 @@ import path from 'path'
 import matter from 'gray-matter'
 import Head from 'next/head'
 import Post from '/components/Post'
-// import styles from '../styles/Home.module.css'
 import { sortByDate } from '/utils/'
+import Link from 'next/link'
+
 
 export default function Home({ posts }) {
   return (
-    <div >
+    <div>
       <Head>
-        {/* <title>dev thoughts</title> */}
+        <title>dev thoughts</title>
         <meta name="description" content="dev thoughts blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {/* {posts} */}
         <div className="posts">
-          {posts.map((post, index) => {
-            return <Post key={index} post={post} />
-          })}
+          <span className='text-xl'>Hey! :) Welcome! 👋</span>
+          <br />
+          <br />
+
+          Just a developer sharing his thoughts with the world on coding, hobbies, books, crypto, earth, life, the universe and Javascript ecosystem.
+
+          <br />
+          <br />
+
+          <span className='text-tiny'>
+            Take everything with a grain of salt! :P 🧂
+          </span>
+          <div className='p-10 mt-10 border mainBoxes'>
+            <h2 className='text-2xl pb-5'>Latest Posts</h2>
+            {posts.map((post, index) => {
+              return <div key={index} className='p-2 postLink'>
+                <Link href={`/blog/${post.filename}/`}>{`- ${post.title}`}</Link>
+              </div>
+            })}
+          </div>
+          {/* <div className='p-10 mt-10 border mainBoxes'>
+            <h2 className='text-2xl pb-5'>Projects</h2>
+            <Projects />
+          </div> */}
         </div>
       </main>
 
@@ -31,14 +52,9 @@ export default function Home({ posts }) {
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('posts'))
   const posts = files.map(filename => {
-    const slug = filename.replace('.md', '')
     const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
-    const { data: frontmatter } = matter(markdownWithMeta)
-
-    return {
-      slug,
-      frontmatter
-    }
+    const { data: frontmatter, content } = matter(markdownWithMeta)
+    return { ...frontmatter, filename: filename.split('.mdx')[0] }
   })
 
   return {

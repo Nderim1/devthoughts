@@ -10,8 +10,8 @@ export default function Header() {
         <div className="navbar">
           <div className="navbarLeft">
             <Link href='/' ><a className='text-2xl mr-10'>dev thoughts</a></Link>
-            <Link href='/'><a className=' mr-10'>Posts</a></Link>
-            <Link href='/'><a className=' mr-10'>Projects</a></Link>
+            {/* <Link href='/posts'><a className=' mr-10'>Posts</a></Link> */}
+            <Link href='/projects'><a className=' mr-10'>Projects</a></Link>
           </div>
           <div className="navbarRight">
 

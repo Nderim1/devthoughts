@@ -2,10 +2,12 @@ import '../styles/globals.css'
 import Image from 'next/image'
 import Header from '/components/Header'
 
-function MyApp({ Component, pageProps }) {
-  return <div>
+function DevThoughts({ Component, pageProps }) {
+  return <div className='h-full'>
     <Header />
-    <Component {...pageProps} />
+    <div className='mainContent h-fit'>
+      <Component {...pageProps} />
+    </div>
     <footer className='footer'>
       <a
         href="https://devthoughts.xyz"
@@ -20,4 +22,4 @@ function MyApp({ Component, pageProps }) {
   </div>
 }
 
-export default MyApp
+export default DevThoughts

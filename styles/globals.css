@@ -7,8 +7,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Wotfard",Futura,-apple-system,sans-serif;
-  background-color: #0c162d;
-  color: #a8b1bc;
+  background-color: #0d1222;
+  color: #e5e5e5;
+  font-size: 18px;
+  line-height: 25px;
+  height: 100%;
 }
 
 a {
@@ -20,6 +23,10 @@ a {
   box-sizing: border-box;
 }
 
+#__next {
+  height: 100%;
+}
+
 .footer {
   display: flex;
   flex: 1;
@@ -28,8 +35,8 @@ a {
   justify-content: center;
   align-items: center;
   bottom: 0;
-  position: fixed;
   width: 100%;
+  margin-top: 60px;
 }
 
 .navbarMain {
@@ -38,6 +45,7 @@ a {
   z-index: 3;
   background: var(--background);
   transition: background 350ms ease 0s;
+  background-color: #0d1222;
 }
 
 .navbarContainer {
@@ -72,4 +80,38 @@ a {
   margin: 0px;
     line-height: calc(1em + 0.725rem);
     -webkit-font-smoothing: antialiased;
+}
+
+.mainContent {
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 30px 30px 30px;
+  min-height: calc(100% - 243px);
+}
+
+.link{
+  color: #3475ef;
+  font-size: 20px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.postLink {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.mainBoxes {
+  background-color: #0c162d;
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
