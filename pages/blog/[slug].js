@@ -3,9 +3,13 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { marked } from 'marked'
+import Head from 'next/head'
 
 export default function PostPage({ frontmatter, slug, content }) {
   return (<>
+    <Head>
+      <title>{frontmatter.title}</title>
+    </Head>
     <h2 className='text-3xl pb-10'>{frontmatter.title}</h2>
 
     <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
