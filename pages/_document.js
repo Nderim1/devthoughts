@@ -5,6 +5,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>dev thoughts</title>
+          <meta property="og:title" content="dev thoughts" key="title" />
           <link
             rel="stylesheet"
             href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"

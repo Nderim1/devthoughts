@@ -12,6 +12,7 @@ export default function Home({ posts }) {
     <div>
       <Head>
         <title>dev thoughts</title>
+        <meta property="og:title" content="dev thoughts" key="title" />
         <meta name="description" content="dev thoughts blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
