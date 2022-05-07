@@ -3,10 +3,8 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          {/* <title>dev thoughts</title>
-          <meta property="og:title" content="dev thoughts" key="title" /> */}
           <link
             rel="stylesheet"
             href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"

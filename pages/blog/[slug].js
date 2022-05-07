@@ -9,6 +9,7 @@ export default function PostPage({ frontmatter, slug, content }) {
   return (<>
     <Head>
       <title>{frontmatter.title}</title>
+      <meta name="description" content={frontmatter.description} />
     </Head>
     <h2 className='text-3xl pb-10'>{frontmatter.title}</h2>
 

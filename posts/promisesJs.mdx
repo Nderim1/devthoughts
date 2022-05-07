@@ -1,14 +1,14 @@
 ---
 title: How can you run 2 promises in parallel in Javascript?
 date: '2022-05-07'
-description: hello javascript promises
+description: There are 2 ways to run Javascript promises in parallel or concurrently; by using Promise.all or by calling the promises before awaiting them
 tags:
   - coding
   - javascript
   - promises
 ---
 
-<img src="/images/posts/promises.png" />
+<img src="/images/posts/promises.png" alt="Banner image" />
 
 <br />
 
@@ -36,13 +36,13 @@ and making them return after 2 seconds by using `setTimeout(() => {...}, 2000)`.
 
 So:
 
-<img src="/images/posts/promises2.png" />
+<img src="/images/posts/promises2.png" alt="Creating two promises that takes 2 seconds each to resolve" />
 
 <br />
 
 Now, usually if you use `async/await` (which you should :), you would do:
 
-<img src="/images/posts/promises3.png" />
+<img src="/images/posts/promises3.png" alt="How you usually resolve promises with async/await" />
 
 <br />
 
@@ -55,7 +55,7 @@ The whole operation lasts 4 unnecessary seconds.
 How can you make both async functions start executing at the same time, or in other words make them run in parallel?
 
 By calling them, before 'awaiting' them:
-<img src="/images/posts/promises4.png" />
+<img src="/images/posts/promises4.png" alt="Calling promises before awaiting them, makes them run in parallel" />
 
 <br />
 <br />
