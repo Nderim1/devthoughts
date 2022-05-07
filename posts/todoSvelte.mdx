@@ -64,13 +64,17 @@ Say you have a variable called `hello` that you want to pass down to a child com
 
 <br />
 
+  <div>
+  {{let a = x}}
+  </div>
+
 ```js
   <script>
     import ChildComponent from './ChildComponent.svelte';
     const hello = 'hello';
   </script>
 
-  <ChildComponent hello={hello} />
+  < ChildComponent hello={hello} />}
 ```
 
 <br />

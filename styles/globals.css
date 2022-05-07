@@ -6,10 +6,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Wotfard",Futura,-apple-system,sans-serif;
+  font-family: 'Source Sans Pro',Futura,-apple-system,sans-serif;
   background-color: #0d1222;
   color: #e5e5e5;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   height: 100%;
 }
@@ -114,4 +114,9 @@ a {
 
 .zoom:hover {
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.codeSnippet {
+  border: 1px solid;
+  padding: 10px;
 }
